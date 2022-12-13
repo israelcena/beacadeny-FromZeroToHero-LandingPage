@@ -112,7 +112,7 @@ section h2 {
   transition: all .2s;
   position: relative;
   border: none;
-  color: var(--color-primary);
+  color: var(--color-grey-dark);
   cursor: pointer;
 }
 
@@ -350,7 +350,7 @@ main {
 }
 
 .card__details ul {
-  /* width: 80%; */
+  width: 70%;
   margin: 0 auto;
 }
 
