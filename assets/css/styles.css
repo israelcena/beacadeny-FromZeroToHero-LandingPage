@@ -169,6 +169,12 @@ header .logo a img {
   text-transform: uppercase;
 }
 
+@media only screen and (max-width: 1366px) {
+  .nav-menu ul {
+    gap: var(--gap-large);
+  }
+}
+
 /* main */
 main {
   position: relative;
