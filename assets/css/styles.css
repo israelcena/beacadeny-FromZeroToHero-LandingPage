@@ -17,9 +17,10 @@
   --color-grey-dark-2: #999;
   --color-grey-dark-3: #333;
 
-
   --color-white: #fff;
   --color-black: #000;
+
+  --header-size: 7vh;
 }
 
 /* reset */
@@ -38,4 +39,108 @@ ul {
 a {
   text-decoration: inherit;
   color: inherit;
+}
+
+blockquote,
+q {
+  quotes: "" "";
+}
+
+/* defaults */
+html {
+  font-size: 62.5%;
+  /* this defines what 1rem, in this case (62.5%) 1rem=10px  / 10px;16px = 62.5% */
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  /*for firefox */
+  scroll-snap-type: y mandatory;
+
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+:target {
+  scroll-margin-top: var(--header-size);
+}
+
+::selection {
+  color: var(--color-secondary-light);
+  background: var(--color-primary-dark);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--color-grey-light-1);
+  /* font-family: 'Roboto', sans-serif; */
+}
+
+section {
+  height: 100vh;
+  background-color: #28b485;
+}
+
+/* header */
+header {
+  position: fixed;
+  background-color: #2998ff;
+  z-index: 1;
+  width: 100vw;
+  height: var(--header-size);
+}
+
+/* main */
+main {
+  position: relative;
+}
+
+.bg-video {
+  background-color: var(--color-primary);
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.bg-video__content {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  opacity: .30;
+}
+
+.content-area {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 6rem;
+  background-color: rgba(255, 255, 255, 0.088);
+}
+
+.content-area h1 {
+  letter-spacing: 4rem;
+}
+
+.content-area h4 {
+  margin-top: -2rem;
+  letter-spacing: .75rem;
+  font-weight: 100;
+}
+
+.content-area .content-area__arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 50vh;
+  left: 50%;
+  animation: arrowBlink 1.8s infinite;
+}
+
+@keyframes arrowBlink {
+  100% {
+    opacity: 0;
+    transform: translateY(30%);
+  }
 }
