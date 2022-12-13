@@ -350,7 +350,7 @@ main {
 }
 
 .card__details ul {
-  width: 80%;
+  /* width: 80%; */
   margin: 0 auto;
 }
 
