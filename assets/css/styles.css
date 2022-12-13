@@ -53,13 +53,19 @@ q {
 /* defaults */
 html {
   font-size: 62.5%;
-  /* this defines what 1rem, in this case (62.5%) 1rem=10px  / 10px;16px = 62.5% */
+  /* this defines what 1rem, in this case (62.5%) 1rem=10px   */
 
   scroll-behavior: smooth;
   scrollbar-width: none;
   /*for firefox */
 
   scroll-snap-type: y mandatory;
+}
+
+@media only screen and (max-width: 1366px) {
+  html {
+    font-size: 60%;
+  }
 }
 
 html::-webkit-scrollbar {
@@ -327,10 +333,24 @@ main {
   width: 60%;
 }
 
+@media only screen and (max-width: 1366px) {
+  .card__heading {
+    font-size: 2.4rem;
+    top: 28%;
+    width: 70%;
+  }
+}
+
 .card__heading-span {
   padding: 1rem 1.5rem;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
+}
+
+@media only screen and (max-width: 1366px) {
+  .card__heading-span {
+    padding: .5rem 1rem;
+  }
 }
 
 .card__heading-span--1 {
@@ -358,6 +378,12 @@ main {
   text-align: center;
   font-size: 2rem;
   padding: .5rem;
+}
+
+@media only screen and (max-width: 1366px) {
+  .card__details ul li {
+    font-size: 1.6rem;
+  }
 }
 
 .card__details ul li:not(:last-child) {
