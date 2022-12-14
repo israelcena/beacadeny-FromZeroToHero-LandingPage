@@ -97,6 +97,12 @@ section {
   height: 100vh;
 }
 
+@media (max-width: 500px) {
+  section {
+    height: auto;
+  }
+}
+
 section h2 {
   text-align: center;
   padding: 1.5rem;
@@ -175,7 +181,8 @@ section h2 {
 /* header */
 header {
   position: fixed;
-  background-color: #2998ff;
+  background: #28b4857a;
+  backdrop-filter: blur(10rem);
   z-index: 1;
   width: 100vw;
   height: var(--header-size);
@@ -196,9 +203,46 @@ header .logo a img {
   text-transform: uppercase;
 }
 
+#mobile-nav-toggle {
+  display: none;
+}
+
 @media only screen and (max-width: 1366px) {
   .nav-menu ul {
     gap: var(--gap-large);
+  }
+}
+
+@media (max-width: 700px) {
+  header {
+    backdrop-filter: none;
+    justify-content: space-between;
+    padding: 0 5rem;
+  }
+
+  .nav-menu {
+    position: fixed;
+    inset: 0 0 0 100%;
+    background-image: linear-gradient(to right bottom, var(--color-primary-light) 15%, var(--color-primary-dark)75%);
+    color: var(--color-grey-light-1);
+    transition: all .5s ease-in-out;
+  }
+
+  .active {
+    inset: 0 0 0 30% !important;
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    margin-top: min(30vh, 10rem);
+    padding-left: min(30vh, 2rem);
+    gap: 6rem;
+    font-size: 2.5rem;
+  }
+
+  #mobile-nav-toggle {
+    display: block;
+    font-size: 4rem;
   }
 }
 
@@ -225,15 +269,45 @@ main {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 100%;
+  width: 100vw;
   transform: translate(-50%, -50%);
   text-align: center;
   font-size: 6rem;
   background-color: rgba(255, 255, 255, 0.088);
 }
 
+@media (max-width: 900px) {
+  .content-area {
+    font-size: 3rem;
+  }
+}
+
 .content-area h1 {
   letter-spacing: 4rem;
+}
+
+@media (max-width: 700px) {
+  .content-area h1 {
+    letter-spacing: 2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .content-area h1 {
+
+    letter-spacing: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .content-area h1 {
+    font-size: 5rem;
+    letter-spacing: .5rem;
+  }
+
+  .content-area h4 {
+    font-size: 3rem;
+  }
 }
 
 .content-area h4 {
@@ -266,6 +340,18 @@ main {
   gap: var(--gap-huge);
 }
 
+@media (max-width: 900px) {
+  .container {
+    gap: var(--gap-large);
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
 /* card structure */
 .card {
   height: 75vh;
@@ -273,6 +359,12 @@ main {
   position: relative;
   perspective: 150rem;
   -moz-perspective: 150rem;
+}
+
+@media (max-width: 500px) {
+  .card {
+    width: 50%;
+  }
 }
 
 .card__side {
@@ -373,6 +465,12 @@ main {
   }
 }
 
+@media (max-width: 900px) {
+  .card__heading {
+    font-size: 2rem;
+  }
+}
+
 .card__heading-span {
   padding: 1rem 1.5rem;
   -webkit-box-decoration-break: clone;
@@ -399,6 +497,12 @@ main {
 
 .card__details {
   padding: 3rem;
+}
+
+@media (max-width: 900px) {
+  .card__details {
+    padding: 1rem;
+  }
 }
 
 .card__details ul {
@@ -681,6 +785,12 @@ main {
 
 .left img {
   height: 100%;
+}
+
+@media (max-width: 500px) {
+  .left {
+    display: none;
+  }
 }
 
 .right {

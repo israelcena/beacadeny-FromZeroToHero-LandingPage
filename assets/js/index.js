@@ -1,3 +1,16 @@
+// mobile menu
+const mobileBtn = document.getElementById("mobile-nav-toggle")
+const userMenu = document.getElementById("primary-navegation")
+mobileBtn.addEventListener("click", () => {
+  userMenu.classList.toggle("active")
+})
+
+userMenu.addEventListener("click", () => {
+  userMenu.classList.remove("active")
+})
+
+
+
 // modal js
 const openBtn1 = document.getElementById("openModal--1");
 const closeBtn1 = document.getElementById("closeModal--1");
