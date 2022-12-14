@@ -283,7 +283,8 @@ main {
   height: 100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  border-radius: 3px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   overflow: hidden;
   transition: all .8s ease-in-out;
   -webkit-box-shadow: 10px 10px 66px -21px rgba(0, 0, 0, 0.75);
@@ -329,8 +330,6 @@ main {
   background-blend-mode: screen;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
 }
 
 .card__picture--1 {
