@@ -107,6 +107,14 @@ section h2 {
   background-clip: text;
 }
 
+.heading--secondary {
+  background-image: linear-gradient(to right, var(--color-secondary-light), var(--color-secondary-dark));
+}
+
+.heading--tertiary {
+  background-image: linear-gradient(to right, var(--color-tertiary-light), var(--color-tertiary-dark));
+}
+
 .btn,
 .btn:link,
 .btn:visited {
