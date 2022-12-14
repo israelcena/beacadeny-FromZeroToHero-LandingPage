@@ -431,7 +431,6 @@ main {
   right: 0;
   bottom: 0;
 
-
   transition: all .5s ease-in-out;
   align-items: center;
   justify-content: center;
@@ -451,6 +450,7 @@ main {
   width: 380px;
   -webkit-animation: bounce-in-bottom 1.1s both;
   animation: bounce-in-bottom 1.1s both;
+  color: var(--color-grey-dark-3);
 }
 
 .modal__inner h2 {
@@ -460,6 +460,21 @@ main {
 .modal__inner p {
   line-height: 24px;
   margin: 10px 0;
+}
+
+.closeModal--btn {
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  border: none;
+  background: none;
+  color: var(--color-grey-dark-2)
+}
+
+.closeModal--btn:hover {
+  color: var(--color-primary);
 }
 
 /* modal keyframes */
