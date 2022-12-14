@@ -665,3 +665,72 @@ main {
   width: 10vw;
   border-radius: 50%;
 }
+
+/* contact */
+#contact .container {
+  display: flex;
+  background-color: whitesmoke;
+}
+
+.left {
+  flex: 1;
+  overflow: hidden;
+  object-fit: contain;
+  height: 70vh;
+}
+
+.left img {
+  height: 100%;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: var(--gap);
+  flex-direction: column;
+  color: var(--color-grey-dark-3);
+}
+
+.right form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.right form:nth-child(n) {
+  font-size: 1.5rem;
+}
+
+.right form> :focus {
+  outline: none;
+  -webkit-box-shadow: 10px 10px 66px -21px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 66px -21px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 66px -21px rgba(0, 0, 0, 0.75);
+  border-bottom: 3px solid green;
+}
+
+.right form> :focus:invalid {
+  border-bottom: 3px solid rgba(255, 0, 0, 0.527);
+}
+
+.right form> ::-webkit-input-placeholder {
+  color: var(--color-grey-dark-3);
+}
+
+.right form input,
+.right form textarea {
+  width: 40vw;
+  padding: 2rem 1rem;
+  border: none;
+  border-bottom: 3px solid transparent;
+  transition: all .3s ease-in-out;
+}
+
+.right form input {
+  height: 3rem;
+}
+
+.right form textarea {
+  resize: none;
+}

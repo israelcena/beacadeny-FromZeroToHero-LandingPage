@@ -220,15 +220,22 @@
   <section id="contact">
     <h2>Contato</h2>
     <div class="container">
-      <form>
-        <input type="hidden" name="form-name" value="name_of_my_form">
-        <input type="text" name="name" id="name" placeholder="Qual é o seu nome ?" required="">
-        <input type="email" name="email" id="email" placeholder="E seu principal Email?" required="">
-        <input type="phone" name="phone" id="phone" placeholder="Telefone c/ddd (pref c/ Whatsapp)?" required="">
-        <textarea rows="5" placeholder="Faça um pequeno resumo do que você precisa." required=""></textarea>
-        <button type="submit">Enviar</button>
-      </form>
+      <div class="left">
+        <img src="./assets/media/contact1920.jpg" alt="Contato" />
+      </div>
+      <div class="right">
+        <h4>Quer entrar em contato para mais informações?</h4>
+        <p>Nosso telefone / whatsapp: 22 99999-5555</p>
+        <form method="POST">
+          <input type="text" name="name" id="name" placeholder="Qual é o seu nome ?" required />
+          <input type="email" name="email" id="email" placeholder="E seu principal Email?" required />
+          <input type="phone" name="phone" id="phone" placeholder="Telefone c/ddd (pref c/ Whatsapp)?" required />
+          <textarea rows="5" placeholder="Faça um pequeno resumo do que você precisa." required></textarea>
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+      </div>
     </div>
+
   </section>
   <footer>
     <h2>Footer</h2>
