@@ -634,3 +634,34 @@ main {
     animation-timing-function: ease-out;
   }
 }
+
+/* Testimonials */
+#testimonials .container {
+  background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+  width: 80vw;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.testimonials__table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.testimonials__table th {
+  background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+  color: var(--color-grey-dark-3);
+  padding: .5rem;
+}
+
+.testimonials__table tr:nth-child(2n+1) {
+  background-color: white;
+  color: var(--color-grey-dark);
+}
+
+
+.testimonials__table--row img {
+  width: 10vw;
+  border-radius: 50%;
+}
