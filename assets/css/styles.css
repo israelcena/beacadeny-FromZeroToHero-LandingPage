@@ -110,7 +110,6 @@ section h2 {
 .btn,
 .btn:link,
 .btn:visited {
-  background-color: var(--color-white);
   font-size: 2rem;
   padding: 1.5rem 4rem;
   display: inline-block;
@@ -122,6 +121,25 @@ section h2 {
   cursor: pointer;
 }
 
+.btn-white {
+  background-color: var(--color-white);
+}
+
+.btn-primary {
+  background-image: linear-gradient(to right bottom, var(--color-primary-light) 15%, var(--color-primary-dark)75%);
+  color: var(--color-grey-light-1);
+}
+
+.btn-secondary {
+  background-image: linear-gradient(to right bottom, var(--color-secondary-light) 15%, var(--color-secondary-dark)75%);
+  color: var(--color-grey-light-1);
+}
+
+.btn-tertiary {
+  background-image: linear-gradient(to right bottom, var(--color-tertiary-light) 15%, var(--color-tertiary-dark)75%);
+  color: var(--color-grey-light-1);
+}
+
 .btn::after {
   content: "";
   display: inline-block;
@@ -131,9 +149,10 @@ section h2 {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
-  transition: all .4s;
-  background-color: var(--color-white);
+  z-index: -10000;
+  transition: all .4s ease-in-out;
+  background-color: inherit;
+  color: inherit;
 }
 
 .btn:hover {
